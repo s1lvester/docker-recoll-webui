@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+    recoll-webui:
+        container_name: recoll-webui
+        image: s1lvester/docker-recoll-webui
+        ports:
+            - 80:8080
+        volumes:
+            - /path/to/data:/data:ro
+            - recoll-config:/root/.recoll
+
