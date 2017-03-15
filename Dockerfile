@@ -3,9 +3,9 @@ FROM debian:jessie
 ADD start.sh /root/
 ADD bgindex.sh /root/
 
-RUN echo deb http://www.lesbonscomptes.com/recoll/debian/ jesse main > \
+RUN echo deb http://www.lesbonscomptes.com/recoll/debian/ jessie main > \
 	/etc/apt/sources.list.d/recoll.list &&\
-    echo deb-src http://www.lesbonscomptes.com/recoll/debian/ jesse main >> \
+    echo deb-src http://www.lesbonscomptes.com/recoll/debian/ jessie main >> \
 	/etc/apt/sources.list.d/recoll.list &&\
     apt-get -qq update && \
     apt-get -qq install recoll python-recoll python git wv poppler-utils && \
